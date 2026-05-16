@@ -1,0 +1,130 @@
+﻿<html><head><meta charset='utf-8'><title>Informe</title></head><body><pre># Informe de la actividad
+
+Describe aqu&#195;&#173; los pasos realizados, comandos usados y pega capturas de pantalla.
+
+## Objetivo
+
+Completar la pr&#195;&#161;ctica de Git/GitHub creando el repositorio `DWeb`, gestionando archivos, ramas, merges, conflictos, tags y subiendo el trabajo a GitHub.
+
+## Resumen de pasos realizados
+
+1. Crear estructura local y archivos iniciales: `README.md`, `Hernan.txt` (renombrado despu&#195;&#169;s), `.gitignore`, `privado.txt`, carpeta `privada/`.
+2. Inicializar repositorio Git y realizar commit inicial con mensaje: &quot;Comenzamos con la creaci&#195;&#179;n de repositorio.&quot;.
+3. Crear rama `Libro`, a&#195;&#177;adir `indice.txt` y `2.txt` en esa rama y commitear.
+4. Volver a `master`, a&#195;&#177;adir `pagina.txt` (versi&#195;&#179;n A) y commitear.
+5. Modificar `pagina.txt` en `Libro` (versi&#195;&#179;n B) y commitear; realizar merge en `master` provocando conflicto en `pagina.txt`.
+6. Resolver conflicto manteniendo la versi&#195;&#179;n final que incluye el cap&#195;&#173;tulo 4 (Gesti&#195;&#179;n de ramas), commitear la resoluci&#195;&#179;n.
+7. Crear tag `Libro` y borrar la rama `Libro` localmente.
+8. A&#195;&#177;adir remoto `origin` y subir `master`, tags y crear/push de la rama remota `v0.2`.
+9. Renombrar `Hernan.txt` a `Angeline.txt`, commitear y push.
+10. Actualizar `README.md` con tu nombre y enlace al repo, a&#195;&#177;adir fila en la tabla de compa&#195;&#177;eros y subir cambios.
+
+## Comandos principales ejecutados
+
+Inicializar y commit inicial:
+
+```
+git init
+git config user.name &quot;Tu Nombre&quot;
+git config user.email &quot;tuemail@example.com&quot;
+git add README.md Hernan.txt .gitignore
+git commit -m &quot;Comenzamos con la creaci&#195;&#179;n de repositorio.&quot;
+```
+
+Ramas, commits y conflicto:
+
+```
+git branch Libro
+git checkout Libro
+echo &quot;&#195;ndice del proyecto&quot; &gt; indice.txt
+echo &quot;Contenido del archivo 2&quot; &gt; 2.txt
+git add indice.txt 2.txt
+git commit -m &quot;A&#195;&#177;adir indice.txt y 2.txt en rama Libro&quot;
+git checkout master
+echo &quot;(versi&#195;&#179;n A)&quot; &gt; pagina.txt
+git add pagina.txt
+git commit -m &quot;A&#195;&#177;adir pagina.txt en master (versi&#195;&#179;n A)&quot;
+git checkout Libro
+echo &quot;(versi&#195;&#179;n B con Cap&#195;&#173;tulo 4)&quot; &gt; pagina.txt
+git add pagina.txt
+git commit -m &quot;Modificar pagina.txt en Libro (versi&#195;&#179;n B)&quot;
+git checkout master
+git merge Libro   # conflicto en pagina.txt
+# Resolver conflicto: editar pagina.txt con la versi&#195;&#179;n final y luego:
+git add pagina.txt
+git commit -m &quot;Resolver conflicto en pagina.txt&quot;
+```
+
+Remoto y push:
+
+```
+git remote add origin https://github.com/AngelineFernandezHuerta/Actividad-4_DWS.git
+git push -u origin master
+git push origin --tags
+git checkout -b v0.2
+git push -u origin v0.2
+```
+
+Renombrar archivo y actualizar README:
+
+```
+git mv Hernan.txt Angeline.txt
+git commit -m &quot;Renombrar Hernan.txt a Angeline.txt&quot;
+git push
+
+# Actualizar README y push
+git add README.md
+git commit -m &quot;Actualizar README: a&#195;&#177;adir autor y enlace al repo&quot;
+git push origin master
+```
+
+Comprobaciones y listados guardados localmente:
+
+```
+git branch --merged &gt; merged_branches.txt
+git branch --no-merged &gt; no_merged_branches.txt
+git log --graph --decorate --all --oneline &gt; commits_overview.txt
+```
+
+## Archivos creados/importantes
+
+- `README.md` (descripci&#195;&#179;n, tabla compa&#195;&#177;eros, autor y enlace)
+- `Hernan.txt` &#226;†’ renombrado a `Angeline.txt`
+- `.gitignore` (ignorando `privado.txt` y `privada/`)
+- `privado.txt`, `privada/.gitkeep`
+- `indice.txt`, `2.txt` (en rama `Libro`)
+- `pagina.txt` (archivo con conflicto resuelto)
+- `merged_branches.txt`, `no_merged_branches.txt`, `commits_overview.txt`
+- `informe.md` (este documento)
+
+## Capturas y evidencias
+
+Pega aqu&#195;&#173; capturas de pantalla de la interfaz de GitHub o del terminal que consideres necesarias. Ejemplos: historial de commits, lista de ramas, conflicto en `pagina.txt`, confirmaci&#195;&#179;n de push en GitHub.
+
+## C&#195;&#179;mo reproducir desde cero
+
+1. Clonar el repo remoto:
+
+```
+git clone https://github.com/AngelineFernandezHuerta/Actividad-4_DWS.git
+cd Actividad-4_DWS/DWeb
+```
+
+2. Revisar ramas y commits:
+
+```
+git branch -a
+git log --graph --decorate --all --oneline
+```
+
+## Notas y siguientes pasos
+
+- Invitar a `sandrallara` como colaborador mediante Settings &#226;†’ Collaborators en GitHub.
+- Seguir y a&#195;&#177;adir estrellas a repositorios de compa&#195;&#177;eros desde la web de GitHub.
+- Si deseas, puedo generar un PDF del informe o insertar capturas si me las facilitas.
+
+---
+
+Fecha de generaci&#195;&#179;n: 2026-05-15
+
+</pre></body></html>
