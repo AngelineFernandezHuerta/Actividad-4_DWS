@@ -14,6 +14,8 @@ Tabla de compañeros (ejemplos — reemplazar con los GitHub reales):
 | Compañero 2 | https://github.com/usuario2 |
 | Compañero 3 | https://github.com/usuario3 |
 
+| Angeline Fernandez Huerta | https://github.com/AngelineFernandezHuerta |
+
 Autor: Angeline Fernandez Huerta
 
 Repositorio en GitHub: https://github.com/AngelineFernandezHuerta/Actividad-4_DWS
